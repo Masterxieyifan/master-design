@@ -1,0 +1,28 @@
+.md-select-input-number {
+    display: inline-flex;
+    align-items: center;
+    .md-select-input-number__select {
+        .el-input__inner{
+            border-right: none;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            &:hover, &:focus {
+                border-color: $--color-gray-300;
+            }
+        }
+        &:hover, &:focus, .el-input.is-focus {
+            .el-input__inner {
+                border-color: $--color-gray-300;
+            }
+        }
+    }
+    .md-select-input-number__input {
+        &.has--select{
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        .el-range__icon {
+            background: transparent;
+        }
+    }
+}

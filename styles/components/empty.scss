@@ -1,0 +1,41 @@
+    
+.vantop-empty {
+    &--wrapper {
+        padding: 40px 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    &--inline {
+        text-align: left;
+        flex-direction: row;
+    }
+    &__image {
+        img {
+            user-select: none;
+            width: 100%;
+            height: 100%;
+            vertical-align: top;
+            object-fit: contain;
+        }
+    }
+    &__title {
+        max-width: 400px;
+        color: $primaryBlack;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 24px;
+    }
+    &__description {
+        max-width: 400px;
+        margin-top: 8px;
+        color: $secondaryFont;
+        font-size: 13px;
+        line-height: 18px;
+    }
+    &__bottom {
+        margin-top: 16px;
+    }
+}

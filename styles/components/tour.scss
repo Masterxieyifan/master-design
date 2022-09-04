@@ -1,0 +1,136 @@
+body.tour--active {
+    pointer-events: none
+}
+
+.tour {
+    pointer-events: auto;
+}
+
+.tour__target--highlighted {
+    // box-shadow: 0 0 0 4px rgba(0, 0, 0, .4);
+    // pointer-events: auto;
+    // z-index: 9999
+}
+
+.tour__target--relative {
+    position: relative
+}
+
+.tour-step {
+    font-family: 'Source Han Sans CN';
+    background: $primaryColor;
+    color: $white;
+    min-width: 200px;
+    max-width: 320px;
+    border-radius: 3px;
+    box-shadow: 0px 4px 6px -2px rgba(0, 0, 0, 0.04), 0px 10px 15px -3px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    padding: 16px;
+    pointer-events: auto;
+    z-index: 3001;
+    &--sticky {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        .tour-step__arrow {
+            display: none
+        }
+    }
+}
+
+.tour-step__arrow,
+.tour-step__arrow:before {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: inherit
+}
+
+.tour-step__arrow {
+    visibility: hidden
+}
+
+.tour-step__arrow--dark:before {
+    background: #454d5d
+}
+
+.tour-step__arrow:before {
+    visibility: visible;
+    content: "";
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.tour-step[data-popper-placement^=top]>.tour-step__arrow {
+    bottom: -4px
+}
+
+.tour-step[data-popper-placement^=bottom]>.tour-step__arrow {
+    top: -4px
+}
+
+.tour-step[data-popper-placement^=right]>.tour-step__arrow {
+    left: -4px
+}
+
+.tour-step[data-popper-placement^=left]>.tour-step__arrow {
+    right: -4px
+}
+
+.tour-step__header {
+    margin: -1rem -1rem .5rem;
+    padding: .5rem;
+    background-color: #454d5d;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px
+}
+
+.tour-step__content {
+    margin: 0 0 16px 0
+}
+
+.tour-step__buttons {
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+    .tour-step__space {
+        flex: auto;
+    }
+}
+
+.tour-step__button {
+    border: solid 1px $primaryColor; 
+    border-radius: 4px;
+    color: $primaryColor;
+    background: $white;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 16px;
+    outline: none;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    transition: all .2s ease;
+    vertical-align: middle;
+    white-space: nowrap;
+    font-size: $fontSizeSmall;
+    font-weight: 400;
+
+    &.tour-step__button-skip {
+        color: rgba(255, 255, 255, 0.8);
+        background: none;
+        border: none;
+        padding-left: 0;
+        padding-right: 0;
+        &:hover {
+            background: none;
+            color: rgba(255, 255, 255, 0.8);
+        }
+    }
+}
+.tour-step__button:hover {
+    background-color: hsla(0, 0%, 100%, .95);
+    color: $primaryColor;
+}

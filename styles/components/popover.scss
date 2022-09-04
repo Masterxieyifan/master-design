@@ -1,0 +1,21 @@
+.vantop-popver--conetent {
+    line-height: 1.5;
+    font-size: 13px;
+}
+.vantop-popover--wrapper {
+    max-width: 400px;
+    min-width: 10px;
+}
+.vantop-ellipsis--wrapper {
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+.vantop-popover--wrapper.vantop-popver--conetent.el-popover{
+    word-break: break-word;
+}

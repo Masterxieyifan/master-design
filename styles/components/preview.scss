@@ -1,0 +1,54 @@
+$borderRadius: 4px;
+
+.img-previewer--reference {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.img-previewer-popper--wrapper {
+    padding: 1px !important;
+    border-radius: $borderRadius;
+    .img-preview--popper__img {
+        display: block;
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+    }
+}
+.img-previewer--empty {
+    display: inline-block;
+    background: $--color-gray-50;
+    color: $--color-gray-400;
+    text-align: center;
+    border-radius: $borderRadius;
+    > i {
+        display: inline-block;
+        font-size: 32px;
+    }
+    &.is--small >i {
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+    }
+    &.is--large >i {
+        width: 48px;
+        height: 48px;
+        line-height: 48px;
+    }
+}
+.img-previewer--wrapper {
+    display: inline-block;
+    text-align: center;
+    background: $--color-gray-50;
+    cursor: pointer;
+    border-radius: $borderRadius;
+    overflow: hidden;
+    &.is--small {
+        width: 32px;
+        height: 32px;
+    }
+    &.is--large {
+        width: 48px;
+        height: 48px;
+    }
+}

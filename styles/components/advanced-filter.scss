@@ -1,0 +1,66 @@
+$popover-max-height: 480px;
+.advanced-filter-content--wrapper {
+    min-width: 300px;
+}
+.advanced-filter--wrapper {
+    .reset-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 6px;
+        color: $primaryColor;
+        font-size: $fontSizeMedium;
+        font-weight: $fontWeightNormal;
+        cursor: pointer;
+    }
+}
+.advanced-filter-popover--wrapper {
+    padding: $commonMargin !important;
+    margin-top: -0px !important;
+    .el-popover__reference {
+        height: $normalHeight;
+    }
+    .content--box {
+        max-height: calc(#{$popover-max-height} - 50px);
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .popper__arrow {
+        display: none !important;
+    }
+    .el-form-item__content {
+        font-size: $fontSizeMedium;
+        line-height: 32px;
+    }
+    // add mutiple classes name for it's weight quality
+    .el-form-item--small.el-form-item {
+        margin-bottom: 0px;
+    }
+    // add mutiple classes name for it's weight quality
+    .el-form-item {
+        margin-bottom: 0px;
+    }
+    .el-row {
+        margin-bottom: 12px !important;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+    .el-col {
+        margin-bottom: 0px;
+    }
+    .el-input__inner {
+        border-radius: 2px;
+    }
+    .el-form-item__label {
+        font-size: $fontSizeMedium;
+        line-height: 32px;
+    }
+}
+.advanced-filter-footer--wrapper {
+    display: flex;
+    margin-top: $commonMargin;
+    .el-button {
+        border-radius: 2px;
+    }
+}

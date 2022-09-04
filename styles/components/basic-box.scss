@@ -1,0 +1,8 @@
+.basic-box--wrapper {
+    height: 100%;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    &.padding {
+        padding: $commonMargin;
+    }
+}

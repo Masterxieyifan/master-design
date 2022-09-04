@@ -1,0 +1,93 @@
+.select-search-input--container {
+    position: relative;
+    display: inline-block;
+    .select-search-input--wrapper {
+        display: flex;
+        &.confirm-btn {
+            .select-input--inner {
+                &>.el-input__inner {
+                    padding-right: 60px;
+                }
+            }
+            .append--wrapper {
+                padding: 0 12px 0 0;
+            }
+        }
+        .select-input--inner:not(.is-disabled) {
+            .el-select .el-input {
+                // width: 88px;
+                input {
+                    padding-left: 12px;
+                    padding-right: 23px !important;
+                    color: $primaryFont;
+                    &:hover {
+                        color: $primaryFont;
+                    }
+                }
+            }
+            // .el-select {
+            //     position: relative;
+            //     top: 1px;
+            //     height: 28px;
+            //     background: $white;
+            //     border-top-left-radius: 2px;
+            //     border-bottom-left-radius: 2px;
+            // }
+            .el-input-group__prepend {
+                background: $white;
+            }
+            .el-input-group__append {
+                background: $white;
+            }
+            &>.el-input__inner {
+                width: 240px;
+                box-sizing: border-box;
+            }
+
+        }
+        .el-icon-circle-close {
+            cursor: pointer;
+            margin-right: 2px;
+            line-height: 32px;
+            visibility: hidden;
+        }
+        .icon-search {
+            cursor: pointer;
+        }
+        &:hover {
+            .el-icon-circle-close {
+                visibility: visible;
+            }
+        }
+        .select-input-limit--words {
+            font-size: 12px;
+            line-height: 32px;
+            user-select: none;
+            cursor: default;
+            padding-right: 3px;
+            color: $secondaryFont;
+        }
+        .append--wrapper {
+            font-size: 16px;
+            position: absolute;
+            right: 0px;
+            display: flex;
+            align-items: center;
+            line-height: 32px;
+            height: 32px;
+            padding: 0px 2px 0px 0px;
+            cursor: pointer;
+            &.disabled {
+                cursor: not-allowed;
+            }
+            &:not(.disabled) {
+                i {
+                    color: $secondaryFont;
+                    &:hover, &:focus {
+                        color: $primaryFont;
+                    }
+                }
+            }
+        }
+    }
+}

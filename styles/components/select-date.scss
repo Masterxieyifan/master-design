@@ -1,0 +1,30 @@
+.md-select-date {
+    display: inline-flex;
+    align-items: center;
+    .md-select-date__select-item {
+        .el-input__inner{
+            border-right: none;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            &:hover, &:focus {
+                border-color: $--color-gray-300;
+            }
+        }
+        &:hover, &:focus, .el-input.is-focus {
+            .el-input__inner {
+                border-color: $--color-gray-300;
+            }
+        }
+    }
+    .md-select-date__date-item {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        .el-input__inner {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        .el-range__icon {
+            background: transparent;
+        }
+    }
+}

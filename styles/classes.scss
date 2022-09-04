@@ -1,0 +1,19 @@
+.flex-1 {
+    flex: 1;
+}
+.dpf {
+    display: flex;
+}
+.dpf-column {
+    display: flex;
+    flex-direction: column;
+}
+.flex-end{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+// 拖拽组件公用样式
+.draggable-ghost{
+    opacity: 0;
+}

@@ -1,0 +1,93 @@
+/*
+----------------------------
+----------------------------
+------- Color Section ------
+----------------------------
+----------------------------
+*/
+$primaryColor: var(--color-primary, #3573FE); // 主要颜色
+$white: #FFFFFF; // 白色
+$primaryBlack: $--color-gray-700; // 主体黑，主要字体颜色
+$secondaryBlack: #606266; // 次要黑，次要字体颜色
+$primaryGrey: #909399; // 主灰，字体颜色
+$secondaryGrey: #BFBFBF; // 次灰，字体颜色
+$searchMain: #F7F9FB; // 旧版搜索框背景颜色
+$btnHoverBgColor: #EEF0F1;
+$disableColor: #DADADA;
+$success: #30C55E;
+$danger: $--color-red-500;
+
+
+
+
+/*
+----------------------------
+----------------------------
+------- Font Section ------
+----------------------------
+----------------------------
+*/
+$fontSize18: 18px; // 一级标题
+$fontSizeLarge: 14px; // 偏大字体 (二级标题)
+$fontSizeMedium: 13px; // 一般字体大小
+$fontSizeSmall: 12px; // 小号字体大小
+
+$fontWeightBold: 800; // 最粗字体 (标题等)
+$fontWeightLightBold: 600; // 次粗字体 (二级标题等)
+$fontWeightSliceBold: 500; // 次粗字体 (二级标题等)
+$fontWeightNormal: 400; // 正常字体大小
+
+$primaryFont: $--color-gray-800; // 主要字体颜色 (表头，标题等)
+$regularFont:  $--color-gray-700;  // 次要字体颜色 (文本内容)
+$secondaryFont: $--color-gray-500; // 再次要字体颜色 (禁用文字等)
+$placeholderFont: $--color-gray-400; // 提示字体颜色 (placeholder 等)
+
+
+/*
+----------------------------
+----------------------------
+------- Margin Section -----
+----------------------------
+----------------------------
+*/
+
+$commonMargin: 20px;
+$tableHeaderBg: #F0F2F5;
+$tableBorderColor: #EBEEF5;
+$tableHoverColor: #f5f7fa;
+$tableScrobarColor: $primaryBlack;
+$lastTableHeaderRPadding: 38px;
+
+/*
+----------------------------
+----------------------------
+------- Size Section -----
+----------------------------
+----------------------------
+*/
+$normalHeight: 32px;
+
+/*
+----------------------------
+----------------------------
+------- Sisyphus Section -----
+----------------------------
+----------------------------
+*/
+
+// Color Section
+$ccfs-primaryColor: $primaryColor;
+$ccfs-white: #FFFFFF;
+// Margin & Padding Section
+$ccfs-containerGap: 20px;
+
+
+// Font Section
+$ccfs-fontSizeSmaller: 12px;
+$ccfs-fontSizeMedium: 13px;
+$ccfs-fontSizeLarger: 14px;
+$ccfs-fontColorBlack: #131313;
+$ccfs-fontColorSecondaryBlack: #595959;
+$ccfs-fontColorGrey: #999999;
+$ccfs-fontColorSecondaryGrey: #BFBFBF;
+$ccfs-iconColor: #9D99B0;

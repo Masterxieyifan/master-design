@@ -1,0 +1,86 @@
+.import-dialogue--wrapper {
+    .inner--wrapper {
+        .instruction--wrapper {
+            font-size: 13px;
+            line-height: 24px;
+            font-weight: 400;
+            &.first-section {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            &.second-section {
+                margin-top: 16px;
+                margin-bottom: 16px;
+            }
+            .title {
+                font-size: 14px;
+                color: $primaryBlack;
+                font-weight: 700;
+            }
+            .subtitle {
+                margin-top: 4px;
+                color: #6B7280;
+            }
+        }
+    }
+}
+.import-result-dialogue--wrapper {
+    .content--wrapper {
+        .content--item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            .file-name--box {
+                font-size: $fontSizeMedium;
+                font-weight: $fontWeightNormal;
+                color: $primaryBlack;
+                line-height: 18px;
+                .success {
+                    color: $success;
+                }
+                .failed {
+                    color: $danger;
+                }
+                .file-name {
+                    margin-left: 10px;
+                }
+            }
+            .file-status--box {
+                padding-right: 32px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                &.text {
+                    color: $secondaryGrey;
+                }
+                .failed {
+                    color: $danger;
+                }
+                .iconfont {
+                    right: 0px;
+                    top: -1px;
+                    position: absolute;
+                }
+                .icon-download1 {
+                    color: $primaryBlack;
+                    cursor: pointer;
+                }
+            }
+        }
+        .download-hint-text {
+            text-align: right;
+            position: relative;
+            padding-right: 32px;
+            .iconfont {
+                right: 0px;
+                top: -1px;
+                position: absolute;
+            }
+            .icon-download1 {
+                color: $primaryBlack;
+                cursor: pointer;
+            }
+        }
+    }
+}

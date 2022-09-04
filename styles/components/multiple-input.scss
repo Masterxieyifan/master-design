@@ -1,0 +1,55 @@
+.multiple-input__reference {
+    .el-input-group__prepend {
+        // border: none;
+        background-color: transparent;
+        // border-right: 1px solid #D1D5DB;
+    }
+    .multiple-select {
+        // background: #fff;
+        .el-input__inner {
+            // border: 1px solid #DCDFE6 !important;
+            // border-right: none !important;
+            // border-radius: 0;
+            // padding-right: 30px;
+        }
+    }
+    input.el-input__inner {
+        // padding-right: 36px;
+        // border-color: #D1D5DB !important;
+        // background-color: #fff !important;
+    }
+}
+.el-popover.multiple-input__popover {
+    padding: 8px 0;
+    box-sizing: border-box;
+    .multiple-input-button_group{
+        position: relative;
+        margin-top: 8px;
+        padding: 0 8px;
+        display: flex;
+        justify-content: flex-end;
+        &::after{
+            position: absolute;
+            top: -10px;
+            left: 0;
+            content: '';
+            height: 1px;
+            width: 100%;
+            background-color: #E5E7EB;
+        }
+        .el-button {
+            
+            &:last-child{
+                margin-left: 8px;
+            }
+        }
+    }
+    .el-textarea{
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+    .el-textarea__inner {
+        padding: 0;
+        border: none;
+    }
+}

@@ -1,0 +1,128 @@
+{
+  "name": "master-design",
+  "version": "0.0.0",
+  "description": "Nextop Businness UI Library",
+  "author": "Nextop FE",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --target lib --name index --dest lib index.js",
+    "test": "vue-cli-service test:unit",
+    "fix": "eslint --fix",
+    "commit": "git-cz",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
+    "postversion": "git push --follow-tags"
+  },
+  "main": "lib/index.umd.min.js",
+  "files": [
+    "lib",
+    "packages",
+    "styles",
+    "mixins",
+    "storage"
+  ],
+  "dependencies": {
+    "@popperjs/core": "^2.9.2",
+    "axios": "^0.21.1",
+    "css-element-queries": "^1.2.3",
+    "echarts": "^5.1.2",
+    "vue-lazyload": "1.3.4",
+    "vuedraggable": "^2.24.3"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.13.8",
+    "@babel/plugin-proposal-optional-chaining": "^7.13.12",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@master_vantop/nextop-core": "^0.0.9",
+    "@master_vantop/nextop-http": "^0.0.9",
+    "@master_vantop/vantop-util": "^0.0.0",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-unit-mocha": "^4.5.11",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/composition-api": "^1.0.0-beta.18",
+    "@vue/eslint-config-standard": "^5.1.2",
+    "@vue/test-utils": "^1.0.3",
+    "async-validator": "1.11.5",
+    "babel-eslint": "^10.1.0",
+    "chai": "^4.2.0",
+    "commitizen": "^4.2.3",
+    "commitlint-config-cz": "^0.13.2",
+    "conventional-changelog-cli": "^2.1.1",
+    "core-js": "^3.14.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^6.3.0",
+    "element-ui": "^2.15.1",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "highlight.js": "^11.0.1",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.3",
+    "markdown-it": "^12.0.6",
+    "markdown-it-anchor": "^8.0.4",
+    "markdown-it-chain": "^1.3.0",
+    "markdown-it-container": "^3.0.0",
+    "mocha": "^8.1.3",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^2.0.0",
+    "transliteration": "^2.2.0",
+    "vue": "2.6.12",
+    "vue-router": "^3.2.0",
+    "vue-template-compiler": "2.6.12",
+    "vuex": "^3.4.0",
+    "vxe-table": "^3.6.1",
+    "xe-utils": "^3.3.1"
+  },
+  "peerDependencies": {
+    "@master_vantop/nextop-http": "^0.0.9",
+    "@master_vantop/vantop-util": "^0.0.0",
+    "axios": "0.21.1",
+    "element-ui": "^2.15.1"
+  },
+  "bugs": {
+    "url": "https://github.com/Masterxieyifan/master-design/issues"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "gitHead": "5345d02000f9e3935c87507e09b0a95c64666383",
+  "homepage": "https://github.com/Masterxieyifan/master-design/README.md",
+  "husky": {
+    "hooks": {
+      "pre-commit": "NODE_ENV=production lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "license": "Apache-2.0",
+  "lint-staged": {
+    "*.js": [
+      "vue-cli-service lint",
+      "git add"
+    ],
+    "*.vue": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Masterxieyifan/master-design.git"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+$ccfs-placeHolderColor: #c0c4cc;
+$ccfs-borderColor: #f0f2f4;
+.van-tree {
+    background-color: $white;
+    overflow-y: hidden;
+    padding: 0 20px;
+    box-sizing: content-box;
+    .search-input--wrapper {
+        padding: 0px;
+        margin-bottom: 10px;
+        color: $ccfs-fontColorSecondaryBlack;
+        input {
+            width: 100%;
+            padding: 5px 0px;
+            border: none;
+            border-bottom: 1px solid $ccfs-borderColor;
+            color: inherit;
+            font-size: $ccfs-fontSizeMedium;
+            &::placeholder {
+                color: $ccfs-placeHolderColor;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    .el-tree-node__content {
+        .custom-tree-node {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 13px;
+            height: 26px;
+            line-height: 26px;
+            margin: 1px 0;
+            padding-left: 4px;
+            .van-tree-popover{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                word-break: break-all;
+            }
+            .custom-tree-node-opt {
+                margin-right: 5px;
+                .custom-tree-node-text {
+                    padding: 0 3px;
+                    color: $primaryBlack;
+                    &:hover {
+                        color: $primaryColor;
+                    }
+                }
+            }
+        }
+    }
+    .el-scrollbar__wrap{
+        overflow-x: hidden;
+    }
+    .van-tree-append {
+        .el-icon-plus {
+            font-size: 14px;
+            line-height: 24px;
+        }
+        .el-link--inner {
+            font-size: 13px;
+            line-height: 24px;
+            margin-left: 4px;
+        }
+    }
+    .van-tree-node-label-count {
+        color: $secondaryFont;
+    }
+    .el-tree-node.is-drop-inner {
+        > .el-tree-node__content {
+            .custom-tree-node {
+                .el-tooltip {
+                    background-color: $--color-brand-500;
+                    color: $white;
+                    .van-tree-node-label-count {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+    .el-tree--highlight-current .el-tree-node.is-current > .el-tree-node__content >.custom-tree-node {
+        background-color: var(--color-primary-50,#eff4ff);
+        color: var(--color-primary,#3573fe);
+    }
+}

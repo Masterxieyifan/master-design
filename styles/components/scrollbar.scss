@@ -1,0 +1,75 @@
+.md-scrollbar {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+
+  .md-scrollbar__wrap {
+    overflow: auto;
+    height: 100%;
+
+    &.md-scrollbar__wrap--hidden-default {
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+
+  .md-scrollbar__thumb {
+    position: relative;
+    display: block;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+    border-radius: inherit;
+    background-color: #909399;
+    transition: .3s background-color;
+    opacity: .3;
+
+    &:hover {
+      background-color: #909399;
+      opacity: .5;
+    }
+  }
+
+  .md-scrollbar__bar {
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+    z-index: 1;
+    border-radius: 4px;
+
+    &.is-vertical {
+      width: 6px;
+      top: 2px;
+
+      > div {
+        width: 100%;
+      }
+    }
+
+    &.is-horizontal {
+      height: 6px;
+      left: 2px;
+
+      > div {
+        height: 100%;
+      }
+    }
+  }
+}
+
+.md-scrollbar-fade {
+  &-enter-active {
+    transition: opacity 340ms ease-out;
+  }
+
+  &-leave-active {
+    transition: opacity 120ms ease-out;
+  }
+
+  &-enter-from,
+  &-leave-active {
+    opacity: 0;
+  }
+}

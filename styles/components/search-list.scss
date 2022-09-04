@@ -1,0 +1,96 @@
+$ccfs-placeHolderColor: #C0C4CC;
+$ccfs-borderColor: #F0F2F4;
+$ccfs-searchListItemGap: 8px;
+.ccfs-search-list--wrapper {
+    min-width: 200px;
+    &.top {
+        padding-top: 10px
+    }
+    &.bottom {
+        padding-bottom: $ccfs-containerGap;
+    }
+    box-sizing: border-box;
+    background: $ccfs-white;
+    .ccfs-search-input--wrapper {
+        margin-bottom: 10px;
+        color: $ccfs-fontColorSecondaryBlack;
+        &.right {
+            padding-right: $ccfs-containerGap;
+        }
+        &.left {
+            padding-left: $ccfs-containerGap;
+        }
+        input {
+            width: 100%;
+            padding: 10px 0px;
+            border: none;
+            border-bottom: 1px solid $ccfs-borderColor;
+            color: inherit;
+            font-size: $ccfs-fontSizeMedium;
+            &::placeholder {
+                color: $ccfs-placeHolderColor;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    .ccfs-search-list--wrapper {
+        &.right {
+            padding-right: $ccfs-containerGap;
+        }
+        &.left {
+            padding-left: $ccfs-containerGap;
+        }
+        .search-list--item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px 4px;
+            margin-bottom: 2px;
+            position: relative;
+            overflow: hidden;
+            box-sizing: border-box;
+            font-size: $ccfs-fontSizeMedium;
+            color: $ccfs-fontColorSecondaryBlack;
+            cursor: pointer;
+            text-overflow: ellipsis;
+            line-height: normal;
+            span {
+                flex: 1;
+                display: inline-block;
+                white-space: nowrap;
+                overflow: hidden;
+                max-width: 75%;
+                text-overflow: ellipsis;
+            }
+            &.selected {
+                background: #EFF4FF;
+                color: $primaryColor;
+            }
+            &:hover {
+                background: $--color-gray-100;
+                .operations {
+                    visibility: visible;
+                }
+            }
+            .operations {
+                visibility: hidden;
+                i {
+                    cursor: pointer;
+                    color: $ccfs-iconColor;
+                    &:hover {
+                        color: $ccfs-primaryColor;
+                    }
+                    &:nth-child(2){
+                        margin-left: 8px;
+                    }
+                }
+            }
+        }
+        .non-data--text {
+            font-size: $ccfs-fontSizeMedium;
+            color: $ccfs-fontColorSecondaryBlack;
+        }
+    }
+}

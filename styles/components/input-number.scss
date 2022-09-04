@@ -1,0 +1,70 @@
+$--color-text-placeholder: $--color-gray-400;
+$--color-danger: #F56C6C;
+$--icon-danger-500: $--color-red-500;
+
+.vantop-number-range {
+    &.el-range-editor {
+        position: relative;
+        justify-content: space-between;
+        input::placeholder {
+            color: $--color-text-placeholder;
+        }
+        .el-input__prefix {
+            height: 32px;
+            position: absolute;
+            top: -1px;
+        }
+        .el-input__wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 0;
+        }
+    }
+    .el-range-separator {
+        font-size: 13px;
+        height: auto;
+        line-height: normal;
+        padding: 0 8px;
+    }
+    .el-range-input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: none;
+        outline: 0;
+        display: inline-block;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        width: 39%;
+        text-align: left;
+        font-size: 13px;
+        color: $regularFont;
+        &[disabled] {
+            background-color: #F3F4F6;
+            color: #9CA3AF;
+            cursor: not-allowed;
+        }
+    }
+    .el-range__close-icon {
+        position: relative;
+        top: 1px;
+        right: -2px;
+        font-size: 16px;
+        color: $--color-text-placeholder;
+        width: 18px;
+        display: inline-block;
+        height: auto;
+        line-height: normal;
+        &.md-icon-clear-fill-16 {
+            cursor: pointer;
+            &:hover{
+                color: $--icon-danger-500;
+            }
+        }
+    }
+    &.is-range-error {
+        border-color: $--color-danger
+    }
+}

@@ -1,0 +1,74 @@
+/*  Typography Section
+=============================*/
+
+// FONT FAMILY SECTION
+.font-family {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.font-family-serif {
+    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+.font-family-coding {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+$fontFamily: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$fontFamilySerif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+$fontFamilyCoding: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+// FONT SIZE SECTION
+.body-12 {
+    font-size: 12px;
+    line-height: 16px;
+}
+.body-13 {
+    font-size: 13px;
+    line-height: 18px;
+}
+.body-14 {
+    font-size: 14px;
+    line-height: 20px;
+}
+.title-16 {
+    font-size: 16px;
+    line-height: 24px;
+}
+.title-18 {
+    font-size: 18px;
+    line-height: 28px;
+}
+.title-20 {
+    font-size: 20px;
+    line-height: 28px;
+}
+.title-24 {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+// FONT WEIGHT SECTION
+.font-light {
+    font-weight: 300;
+}
+
+.font-normal {
+    font-weight: 400;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-black {
+    font-weight: 900;
+}
+
+$fontLight: 300;
+$fontNormal: 400;
+$fontMedium: 500;
+$fontBold: 700;
+$fontBlack: 900;

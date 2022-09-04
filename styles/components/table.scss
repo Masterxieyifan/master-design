@@ -1,0 +1,273 @@
+.vantop-table--wrapper {
+    display: flex;
+    flex-direction: column;
+    .col--checkbox {
+        & > .c--tooltip {
+            justify-content: flex-end;
+        }
+    }
+    .column-operation {
+        cursor: pointer;
+    }
+    .vantop-table--container {
+        position: relative;
+        flex: 1;
+        margin-bottom: 8px;
+        .vxe-table {
+            .vxe-checkbox--icon {
+                &::before {
+                    border-width: 1px;
+                }
+            }
+            .vxe-cell {
+                white-space: normal;
+                .vxe-cell--copiable{
+                    display: flex;
+                    align-items: center;
+                    .md-icon-copy-light-16 {
+                        display: none;
+                        cursor: pointer;
+                        color: var(--color-primary, #3573FE);
+                        margin-left: 8px;
+                    }
+                    &:hover {
+                        .md-icon-copy-light-16 {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+            .vxe-table--main-wrapper {
+                .vxe-table--body-wrapper {
+                    &::-webkit-scrollbar {
+                        scrollbar-color: $tableScrobarColor;
+                    }
+                }
+                .col--checkbox {
+                    &.vantop-table-cell, &.vantop-table-header-cell {
+                        &:first-child .vxe-cell {
+                            padding-left: 12px;
+                            padding-right: 12px;
+                        }
+                    }
+                }
+            }
+            .vxe-body--row {
+                position: relative;
+            }
+        }
+        .vxe-table--header-wrapper {
+            .vxe-header--column {
+                position: relative; // fix the resizable line position uncorrect
+                padding: 10px 0;
+                font-size: $fontSizeMedium;
+            }
+        }
+    }
+    .toolbar--wrapper {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        padding: 0px 8px;
+        z-index: 9;
+        background-color: #fff;
+        border-top-right-radius: 4px;
+        .iconfont {
+            font-size: 16px;
+        }
+        .fresh--wrapper {
+            cursor: pointer;
+            margin-right: 12px;
+            &:hover {
+                color: $primaryColor;
+            }
+        }
+    }
+    $footerCommonMargin: 12px;
+    .vantop-table-footer--wrapper {
+        display: flex;
+        margin-top: 1px;
+        justify-content: space-between;
+        padding: 8px 12px;
+        background-color: #ffffff;
+        padding-left: $footerCommonMargin;
+        .footer-buttons {
+            display: flex;
+        }
+        .select-all-wrapper {
+            display: flex;
+            align-items: center;
+            height: 32px;
+            line-height: 32px;
+            margin-right: 24px;
+            color: $regularFont;
+
+            .vxe-checkbox {
+                .vxe-checkbox--icon {
+                    &::before {
+                        border-width: 2px;
+                    }
+                }
+                .vxe-checkbox--label {
+                    padding-left: 8px;
+                }
+            }
+            .vxe-checkbox > input + .vxe-checkbox--icon {
+                border-width: 1px;
+            }
+            .vxe-checkbox:not(.is--disabled)
+                > input:focus
+                + .vxe-checkbox--icon {
+                box-shadow: none;
+            }
+            .vxe-checkbox
+                > input:checked
+                + .vxe-checkbox--icon
+                + .vxe-checkbox--label {
+                color: $primaryFont;
+            }
+        }
+        .btn-prev,
+        .btn-next,
+        .el-pager,
+        .number,
+        .more {
+            background-color: transparent;
+        }
+    }
+    .vxe-table--empty-placeholder .vantop-empty--wrapper {
+        height: 100%;
+    }
+    .row--hover {
+        .operations--wrapper .inner {
+            background: #f9fafb;
+        }
+        .gradient-section {
+            width: 24px;
+        }
+    }
+    .operations--wrapper {
+        display: flex;
+        align-items: center;
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .more-hint-icon {
+            display: block;
+            color: $primaryColor;
+            font-size: 16px;
+            margin-right: 16px;
+        }
+        .el-button--text {
+            display: block;
+            padding: 0px;
+            border: none;
+            font-size: $fontSizeMedium;
+            font-weight: $fontWeightNormal;
+        }
+        .operations--wrapper__a + .more-operation--wrapper {
+            margin-left: 6px;
+        }
+        .operations--wrapper__a + .operations--wrapper__a {
+            margin-left: 6px;
+        }
+        .more-operation--wrapper {
+            display: block;
+            button span {
+                font-size: $fontSizeMedium;
+                font-weight: $fontWeightNormal;
+            }
+        }
+    }
+    .vantop-loading {
+        z-index: 1000;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        user-select: none;
+        background-color: rgba(255, 255, 255, 0.9);
+        &::v-deep .el-loading-spinner .circular {
+            height: 42px;
+            width: 42px;
+            animation: loading-rotate 2s linear infinite;
+        }
+        &::v-deep .el-loading-spinner .path {
+            animation: loading-dash 1.5s ease-in-out infinite;
+            stroke-dasharray: 90, 150;
+            stroke-dashoffset: 0;
+            stroke-width: 2;
+            stroke: $primaryColor;
+            stroke-linecap: round;
+        }
+    }
+    .gray {
+        .vxe-header--gutter, &.toolbar--wrapper, .vxe-header--column {
+            background-color: $--color-gray-100;
+        }
+    }
+    .white {
+        .vxe-header--gutter, &.toolbar--wrapper, .vxe-header--column {
+            background-color: #fff;
+        }
+    }
+    &.is--padding {
+        .vantop-table--container {
+            padding-left: $commonMargin;
+            padding-right: $commonMargin;
+        }
+        .vantop-table-footer--wrapper {
+            padding-left: calc(#{$commonMargin} + #{$footerCommonMargin});
+        }
+    }
+    &.is--pagination .vantop-table--container{
+        margin-bottom: 0;
+    }
+
+    &.is--toolbar {
+        .vantop-table--container {
+            .vxe-table--header-wrapper {
+                .vxe-header--column {
+                    &:last-child .vxe-cell {
+                        padding-right: $lastTableHeaderRPadding;
+                        .vxe-resizable {
+                            right: $lastTableHeaderRPadding; // add 5px to prevent can't click it
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.is--form .vxe-table .vxe-body--row .vxe-body--column .el-form-item{
+        margin-bottom: 0;
+    }
+}
+
+/**
+*   #FIXBUG fix change tab, table re-calculate height overflow prob
+*   #TODO need test whether it will have some side effect or not
+*/
+.vantop-table--wrapper,
+.vantop-table--container {
+    overflow: hidden;
+}
+
+.vantop-table--operations__dropdown-menu.el-dropdown-menu {
+    a {
+        color: inherit;
+        text-decoration: none;
+        width: 100%;
+        text-indent: 28px;
+    }
+    .el-dropdown-menu__item{
+        min-width: 160px;
+        position: relative;
+        >i {
+            margin-right: 0;
+            position: absolute;
+            pointer-events: none;
+        }
+    }
+}

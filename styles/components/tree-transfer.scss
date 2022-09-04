@@ -1,0 +1,166 @@
+.tree-transfer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    article{
+        flex: 1;
+        height: 548px;
+        min-width: 300px;
+        header{
+            height: 40px;
+            background: $tableHoverColor;
+            padding: 0px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .el-checkbox__label{
+                color: $secondaryBlack;
+                font-size: 13px;
+            }
+            span.number{
+                color: $primaryGrey;
+                font-size: 13px;
+            }
+        }
+        section{
+            padding: 0px 16px;
+            .el-input{
+                margin: 16px 0px;
+            }
+            .empty-text{
+                font-size: 13px;
+            }
+            .el-input__suffix{
+                line-height: 33px;
+                margin: 0 3px;
+            }
+            .el-checkbox-group{
+                height: 444px;
+                overflow: auto;
+            }
+        }
+    }
+    .left{
+        border-radius: 2px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border: 1px solid #DCDFE6;
+        section{
+            .left-selected-box{
+                    height: 444px;
+                    overflow: auto;
+                    position: relative;
+                .tree-transfer-no-data{
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                .el-tree {
+                    background: transparent;
+                    height: 444px;
+                    overflow: auto;
+                    .el-tree-node__content{
+                        height: 32px;
+                        .el-checkbox{
+                            display: flex;
+                        }
+                        .transfer-tree-node{
+                            flex: 1;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            word-break: break-all;
+                            font-size: 13px;
+                            .transfer-tree-node-label{
+                                display: block;
+                                width: fit-content;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                font-weight: 400;
+                            }
+                        }
+                        &:hover{
+                            background: #EBF1FF;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .right header{
+        span.title{
+            color:  $secondaryBlack;
+            font-size: 13px;
+        }
+        button{
+            i{
+                font-size: 16px;
+                vertical-align: middle;
+            }
+            span{
+                vertical-align: middle;
+            }
+            font-size: 13px;
+            color: #F56C6C;
+            font-weight: 400;
+        }
+    }
+    .right{
+        border-radius: 2px;
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0px;
+        border-right: 1px solid #DCDFE6;
+        border-top: 1px solid #DCDFE6;
+        border-bottom: 1px solid #DCDFE6;
+        section{
+            .selected-box{
+                height: 444px;
+                overflow: auto;
+                position: relative;
+                .selected-box-list{
+                    display: flex;
+                    justify-content: space-between;
+                    height: 32px;
+                    line-height: 32px;
+                    font-size: 13px;
+                    padding-right: 5px;
+                    margin: 0px;
+                    color: $secondaryBlack;
+                    padding: 0px 8px;
+                    cursor: pointer;
+                    .transfer-tree-node-right-label{
+                        display: block;
+                        width: fit-content;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        font-weight: 400;
+                    }
+                    i{
+                        font-size: 14px;
+                        line-height: 32px;
+                        &:hover{
+                            background: #EBF1FF;
+                            color: $primaryColor;
+                        }
+                    }
+                    &:hover{
+                        background: #EBF1FF;
+                    }
+                }
+                .is-hidden{
+                    display: none;
+                }
+            }
+            .tree-transfer-no-data{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}

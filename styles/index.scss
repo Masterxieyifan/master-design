@@ -1,0 +1,16 @@
+@import './base/chromatography.scss';
+@import './variables.scss';
+@import './normalize.scss';
+@import './classes.scss';
+@import './module.scss';
+@import './icons.scss';
+
+
+// master design icon 字体匹配
+[class^="md-icon-"], [class*=" md-icon-"] {
+    font-family: "MD-IconFont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

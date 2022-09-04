@@ -1,0 +1,186 @@
+.vantop-upload-wrapper {
+    .upload-item {
+        margin: 8px;
+    }
+}
+// 数据量大提示弹窗
+.vantop--upload-big-data-tips {
+    background: $--color-gray-100;
+    border-radius: 4px;
+    padding: 12px 10px;
+    .tips-head {
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+        i {
+            margin-right: 10px;
+        }
+        .head-text {
+            font-weight: 500;
+            color: $--color-gray-600;
+        }
+        .go-to {
+            margin-left: auto;
+            font-weight: 500;
+            font-size: 13px;
+            color: $--color-blue-600;
+            span {
+                margin-right: 4px;
+            }
+        }
+    }
+    .tips-footer {
+        padding-left: 23px;
+        font-weight: 500;
+        color: $--color-gray-600;
+        font-size: 12px;
+    }
+}
+
+// 导出数据弹窗
+.vantop--upload-export-data-dialog {
+    .dialog-text {
+        font-size: 14px;
+        .count {
+            font-weight: 400;
+            color: $--color-red-500;
+        }
+    }
+}
+
+// 导入弹窗
+.vantop--upload-import-dialog {
+    .el-upload-list__item-name {
+        font-size: 13px;
+        line-height: 28px;
+    }
+    .step-1 {
+        margin-bottom: 24px;
+        .template-list-wrapper {
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+            .step-1-text {
+                font-weight: 400;
+                color: $--color-gray-500;
+            }
+            .template-list-item {
+                padding: 0 8px;
+                border-right: 1px solid $--color-gray-300;
+                &:first-child,
+                &:last-child {
+                    border: 0;
+                }
+                .el-link {
+                    font-weight: 400;
+                    color: $--color-blue-600;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    .step-2 {
+        margin-bottom: 16px;
+        .import-rule-desc {
+            font-size: 13px;
+            font-weight: 400;
+            color: $--color-gray-500;
+        }
+    }
+    .head-title {
+        font-size: 14px;
+        font-weight: 500;
+        color: $--color-gray-700;
+        margin-bottom: 8px;
+    }
+}
+
+// Upload 上传组件
+.vantop--upload-upload-wrapper {
+    display: flex;
+    .el-upload {
+        width: 100%;
+        text-align: left;
+        .el-upload__text {
+            width: 100%;
+            .text-head {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $--color-gray-700;
+                font-size: 13px;
+                margin-bottom: 10px;
+                i {
+                    line-height: inherit;
+                    color: $--color-gray-600;
+                    font-size: 22px;
+                    margin: 0;
+                    margin-right: 10px;
+                }
+                span {
+                    em {
+                        margin-left: 8px;
+                    }
+                }
+            }
+            .text-footer {
+                color: $--color-gray-400;
+                font-size: 12px;
+            }
+        }
+        .el-upload-dragger {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            &:hover {
+                border-color: $--color-brand-500;
+            }
+        }
+    }
+}
+
+// 正在导入弹窗
+.vantop--upload-importing-dialog {
+    .importing-file-list {
+        margin-bottom: 24px;
+        .list-item {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+            padding: 6px 4px;
+            i {
+                font-size: 16px;
+                margin-right: 8px;
+                &.success {
+                    color: $--color-light-green-500;
+                }
+                &.error {
+                    color: $--color-red-500;
+                }
+                &.loading {
+                    color: $--color-brand-500;
+                }
+                &.loading {
+                    background: $--color-gray-100;
+                    border-radius: 4px;
+                }
+            }
+            .file-status-text {
+                margin-left: auto;
+                display: flex;
+                align-items: center;
+                .error {
+                    color: $--color-red-500;
+                }
+                i {
+                    cursor: pointer;
+                    color: $--color-gray-500;
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,81 @@
+.pop-droplist--wrapper.el-popper {
+    padding: 0px !important;
+    margin: 0px !important;
+    .popper__arrow {
+        display: none !important;
+    }
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.08), 0px 4px 6px -2px rgba(0, 0, 0, 0.04);
+}
+.pop-droplist-content--wrapper {
+    max-width: 220px;
+    .hint {
+        padding: 16px 16px 8px;
+        font-size: 13px;
+        color: $--color-gray-400;
+    }
+    .select-all--wrapper {
+        padding: 8px 16px;
+        cursor: pointer;
+        .el-checkbox .el-checkbox__label {
+            font-size: $fontSizeMedium;
+            color: $regularFont;
+        }
+        &:hover {
+            background: $--color-gray-50;
+        }
+    }
+    .el-checkbox-group {
+        max-height: 322px;
+        overflow: auto;
+        .check-item--wrapper {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: 0px;
+            padding: 8px 16px;
+            .el-checkbox .el-checkbox__label > span {
+                overflow: hidden;
+                max-width: 145px;
+                display: inline-block;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                vertical-align: middle;
+            }
+            &:hover {
+                background: $--color-gray-50;
+                .el-checkbox .el-checkbox__label > span {
+                    max-width: 131px;
+                }
+                .dragger-icon {
+                    display: block;
+                }
+            }
+            .dragger-icon {
+                font-size: 14px;
+                display: none;
+            }
+        }
+       
+    }
+}
+.popdroplist--trigger {
+    cursor: pointer;
+    &:hover {
+        color: $primaryColor;
+    }
+    .iconfont {
+        font-size: 16px;
+    }
+}
+.pop-droplost-footer--wrapper {
+    display: flex;
+    padding: 12px 18px;
+    border-top: 1px solid #E3E7ED;
+    .footer-btn {
+        font-size: $fontSizeMedium;
+        margin-right: 16px;
+        cursor: pointer;
+        color: $regularFont;
+    }
+}

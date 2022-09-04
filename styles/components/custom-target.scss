@@ -1,0 +1,191 @@
+.md-custom-target {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: #fff;
+    align-items: flex-start;
+    box-sizing: border-box;
+    ul, li {
+        margin: 0;
+        padding: 0;
+    }
+    .vantop-empty--wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .el-scrollbar__wrap {
+        overflow-x: auto;
+        .el-scrollbar__view {
+            height: auto;
+            min-height: 100%;
+        }
+    }
+    .custom-target--left {
+        flex: 1;
+        padding-top: 8px;
+        height: 100%;
+        &__search {
+            width: calc(100% - 24px);
+        }
+        &__container {
+            height: calc(100% - 32px);
+            box-sizing: border-box;
+            .custom-target--list {
+                padding-bottom: 18px;
+                &:first-of-type {
+                    padding-top: 17px;
+                }
+                &__title {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 14px;
+                    color: var(--color-text-regular, #374151);
+                    font-size: 13px;
+                    font-weight: bold;
+                    &::before {
+                        display: inline-block;
+                        content: '';
+                        margin-right: 8px;
+                        background: var(--color-primary, #3573FE);
+                        width: 4px;
+                        height: 14px;
+                    }
+                }
+                &__item {
+                    user-select: none;
+                    cursor: pointer;
+                    display: inline-block;
+                    height: 32px;
+                    width: 190px;
+                    line-height: 32px;
+                    padding: 0 8px;
+                    font-size: 13px;
+                    margin: 0 16px 16px 0;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    border-radius: 4px;
+                    color: var(--color-text-regular, #374151);
+                    background: var(--background-color-base, #F3F4F6);
+                    &:hover {
+                        background: var(--background-color-dark, #E5E7EB);
+                    }
+                    &.is-select {
+                        cursor: pointer !important;
+                        background: var(--color-primary-100, #E2ECFF);
+                        color: var(--color-primary, #3573FE);
+                    }
+                    &.is-max {
+                        cursor: not-allowed;
+                    }
+                }
+            }
+        }
+    }
+    .custom-target--right {
+        width: 262px;
+        height: 100%;
+        &__header {
+            height: 40px;
+            padding: 0 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--background-color-base, #F3F4F6);
+            border: 1px solid var(--border-color-light, #E5E7EB);
+            .tips {
+                color: var(--color-text-regular, #374151);
+                font-size: 13px;
+                display: flex;
+                align-items: center;
+                i {
+                    color: var(--color-text-regular, #374151);
+                    margin-left: 3px;
+                }
+            }
+            >.el-button {
+                color: var(--color-danger, #EF4444);
+                font-weight: normal;
+            }
+        }
+        &__container {
+            height: calc(100% - 40px);
+            border: 1px solid var(--border-color-light, #E5E7EB);
+            border-top: none;
+            box-sizing: border-box;
+            ul {
+                padding: 16px;
+                &.is-dragging i {
+                    display: none !important;
+                }
+            }
+            li {
+                user-select: none;
+                height: 32px;
+                padding: 0 8px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                color: var(--color-text-regular, #374151);
+                background: var(--background-color-base, #F3F4F6);
+                border-radius: 4px;
+                cursor: move;
+                .custom-target--selected__label {
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    flex: 1;
+                    overflow: hidden;
+                }
+                i {
+                    display: none;
+                    cursor: pointer;
+                    &:hover {
+                        color: var(--color-text-regular, #374151);
+                    }
+                    &:not(:first-of-type) {
+                        margin-left: 10px;
+                    }
+                    &.nt-icon-drag-16 {
+                        cursor: move;
+                    }
+                }
+                &:not(:first-of-type) {
+                    margin-top: 8px;
+                }
+                &:hover {
+                    background: var(--background-color-dark, #E5E7EB);
+                    i {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+    .custom-target--tooltip.el-tooltip__popper {
+        max-width: 400px;
+    }
+    .custom-target-group {
+        &-item-title {
+            display: flex;
+            margin-bottom: 8px;
+            line-height: 32px;
+            height: 32px;
+            font-weight: 400;
+            font-size: 13px;
+            cursor: pointer;
+            justify-content: space-between;
+            .el-button {
+                display: none;
+                color: var(--color-danger, #ef4444);
+            }
+            &:hover {
+                color: var(--color-primary, #3573fe);
+                .el-button {
+                    display: inline;
+                }
+            }
+        }
+    }
+}

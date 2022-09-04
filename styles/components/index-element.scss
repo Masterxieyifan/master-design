@@ -1,0 +1,71 @@
+.md-index-element {
+    display: inline-flex;
+    .element-body {
+        display: inline-flex;
+        // align-items: center;
+        align-items: flex-end;
+        font-size: 13px;
+        color: var(--color-success, #22C55E);
+        // &.reverse {
+        //     justify-content: space-between;
+        //     flex-flow: row-reverse;
+        //     .element-triangle {
+        //         margin-right: 0;
+        //     }
+        //     .element-percent {
+        //         margin-right: 5px;
+        //     }
+        // }
+        .triangle-percent-wrapper {
+            display: flex;
+            // align-items: flex-end;
+            align-items: center;
+            &.reverse {
+                justify-content: space-between;
+                flex-flow: row-reverse;
+                .element-triangle {
+                    margin-right: 0;
+                }
+                .element-percent {
+                    margin-right: 5px;
+                }
+            }
+            .element-triangle {
+                width: 0;
+                height: 0;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-bottom: 8px solid var(--color-success, #22C55E);;
+                margin-right: 5px;
+            }
+            .element-percent-zero {
+                color: var(--color-info, #6b7280);
+            }
+        }
+
+        &.down {
+            color: var(--color-danger, #ef4444);
+            .element-triangle {
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-top: 8px solid #ef4444;
+                border-bottom: 0;
+            }
+        }
+    }
+    .percent-pie {
+        display: inline-block;
+        line-height: 16px;
+        .percent-body {
+            display: inline-flex;
+            padding: 1px 4px;
+            background: rgba($color: #083ea9, $alpha: 0.14);
+            border-radius: 9px;
+            box-sizing: border-box;
+            .percent-percentage {
+                color: #3573fb;
+                font-weight: 600;
+            }
+        }
+    }
+}
